@@ -1,0 +1,200 @@
+
+/* General Page Styling */
+
+body { background-color: #f8f9fa; font-family: 'Segoe UI', sans-serif; }
+
+
+
+/* Custom Headers & Themes */
+
+.header-summary { background-color: #0d6efd !important; }
+
+.header-block { background-color: #0f766e !important; }
+
+.header-spoke { background-color: #198754 !important; }
+
+.header-phc { background-color: #6b21a8 !important; }
+
+.header-congratulation { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important; }
+
+
+
+/* Table Headings */
+
+.subhead-dark-blue { background-color: #1e3a8a !important; color: #fff !important; }
+
+.subhead-dark-teal { background-color: #115e59 !important; color: #fff !important; }
+
+.subhead-dark-green { background-color: #14532d !important; color: #fff !important; }
+
+.subhead-dark-purple { background-color: #581c87 !important; color: #fff !important; }
+
+.subhead-gold { background-color: #b45309 !important; color: #fff !important; }
+
+
+
+/* WhatsApp Button */
+
+.btn-whatsapp { background-color: #25d366 !important; border-color: #25d366 !important; }
+
+
+
+
+
+/* Responsive UI Helpers */
+
+/* মোবাইল (৫৭৬px এর কম) */
+@media (max-width: 576px) {
+    /* হেডার ফন্ট সাইজ ছোট করা */
+    h3 { font-size: 1.1rem !important; }
+    h5 { font-size: 0.9rem !important; }
+
+    /* বাটন ও ইনপুট সাইজ ঠিক রাখা */
+    .form-control, .form-select, .btn {
+        font-size: 0.9rem !important;
+        height: 40px !important; /* আঙুলের স্পর্শের জন্য বড় হাইট */
+    }
+
+    /* টেবিল রেসপনসিভ করা */
+    .table td, .table th {
+        font-size: 0.8rem !important;
+        padding: 0.4rem !important;
+    }
+}
+
+/* ট্যাবলেট (৭৬৮px পর্যন্ত) */
+@media (min-width: 577px) and (max-width: 991px) {
+    .container-fluid {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
+
+
+
+/* যদি Bootstrap-এর সাথে কনফ্লিক্ট করে, তবে এটি যোগ করুন */
+
+.table thead tr th {
+
+    background-color: inherit !important;
+
+    color: inherit !important;
+
+}
+
+
+
+/* সকল টেবিলের জন্য গ্লোবাল বর্ডার স্টাইল (ওয়েব ও প্রিন্ট উভয়ের জন্য) */
+
+.table, .table-bordered {
+
+    border: 1px solid #000 !important;
+
+}
+
+
+
+.table thead th,
+
+.table tbody td {
+
+    border: 1px solid #000 !important;
+
+}
+
+
+
+
+
+
+
+/* ================= PDF OPTIMIZED PRINT SETTINGS ================= */
+
+@media print {
+
+    /* ১. পেজ মার্জিন ও সেটিংস */
+
+    @page {
+
+        margin: 10mm;
+
+        size: portrait;
+
+    }
+
+
+
+    /* ২. কার্ড ব্রেকিং রোধ */
+
+    .card {
+
+        page-break-inside: avoid !important;
+
+        break-inside: avoid !important;
+
+        margin-bottom: 10px !important;
+
+        border: 1px solid #000000 !important;
+
+        box-shadow: none !important;
+
+    }
+
+   
+
+    .page-break-before {
+
+        page-break-before: auto !important;
+
+        break-before: auto !important;
+
+    }
+
+
+
+    /* ৩. হাইড এলিমেন্ট */
+
+    .no-print, .btn, #searchBox, #blockFilter, #excelFile, .card-footer {
+
+        display: none !important;
+
+    }
+
+
+
+    /* ৪. কলাম উইডথ */
+
+    .col-sn { width: 5% !important; }
+
+    .col-name { width: 30% !important; }
+
+    .col-block { width: 20% !important; }
+
+    .col-cho { width: 20% !important; }
+
+    .col-val { width: 25% !important; }
+
+
+
+    /* ৫. কালার এনফোর্সমেন্ট (সবার জন্য একই সাথে) */
+
+    table thead tr th,
+
+    tbody tr,
+
+    tbody tr td,
+
+    .header-summary, .header-block, .header-spoke, .header-phc,
+
+    .subhead-dark-blue, .subhead-dark-teal, .subhead-dark-green,
+
+    .subhead-dark-purple, .subhead-gold {
+
+        -webkit-print-color-adjust: exact !important;
+
+        print-color-adjust: exact !important;
+
+    }
+
+}
+tr { page-break-inside: avoid !important; }
